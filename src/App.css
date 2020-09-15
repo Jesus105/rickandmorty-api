@@ -1,38 +1,97 @@
+figure {
+  margin: 0;
+}
+.title{
+  width: 96%;
+max-width: 960px;
+margin: 0 auto;
+}
+.title-img {
+  width: 100%;
+  height: auto;
+  }
 .App {
   text-align: center;
+  height: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App-contenedor {
   background-color: #282c34;
-  min-height: 100vh;
+  color: white;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* padding: 30px; */
+  font-size: calc(10px + 2vmin);
+}
+.Cards-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.Card {
+  border: 1px white solid;
+  border-radius: 10px;
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+.Card:hover {
+  cursor: pointer;
+}
+.Card-imagen figure img {
+  border-radius: 10px;  
+}
+.Card-imagen figure img:hover {
+  filter: saturate(250%);;
+}
+.Card-descripcion {
+  padding: 0 30px;
+}
+.Card-name {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.Modal {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.Card-detalle {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
   font-size: calc(10px + 2vmin);
   color: white;
+  top: 0;
 }
-
-.App-link {
-  color: #61dafb;
+.Card-detalle-descripcion {
+  width: 100%;
+  padding: 30px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.caracteristica {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.caracteristica p {
+  margin: 5px;
+}
+.caracteristica-valor {
+  color: #17ff75
+}
+@media screen and (max-width: 570px){
+  .Cards-contenedor{
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .Card-detalle{
+    flex-direction: column;
   }
 }
